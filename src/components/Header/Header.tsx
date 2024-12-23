@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import cn from 'classnames';
 
-import { USER_ID, createTodo, updateTodo } from '../../api/todos';
+import { createTodo, updateTodo } from '../../api/todos';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { addTodo, setError, setTodo } from '../../store/slices/todos.slice';
 import {
@@ -16,6 +16,7 @@ export const Header: React.FC = () => {
 
   const dispatch = useAppDispatch();
   const { todos } = useAppSelector(state => state.todos);
+  const { user } = useAppSelector(state => state.login);
 
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -39,10 +40,16 @@ export const Header: React.FC = () => {
       return;
     }
 
+    if (!user) {
+      dispatch(setError('You need to log in'));
+
+      return;
+    }
+
     const newTodo = {
       title: newTitle.trim(),
       completed: false,
-      userId: USER_ID,
+      userId: user.id,
     };
 
     setIsSubmitting(true);

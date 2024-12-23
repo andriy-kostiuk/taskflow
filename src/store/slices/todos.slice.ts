@@ -17,11 +17,14 @@ const initialState: TodosState = {
   filter: Filter.ALL,
 };
 
-export const fetchTodos = createAsyncThunk('todos/fetchTodos', async () => {
-  const response = await getTodos();
+export const fetchTodos = createAsyncThunk(
+  'todos/fetchTodos',
+  async (userId: number) => {
+    const response = await getTodos(userId);
 
-  return response;
-});
+    return response;
+  },
+);
 
 const todosSlice = createSlice({
   name: 'todos',

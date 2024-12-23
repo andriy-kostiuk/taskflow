@@ -1,4 +1,4 @@
-# Todo App
+# Todo App [Todo App (Link)](https://andriy-kostiuk.github.io/todo_app/)
 
 A React & TypeScript project built using Redux Toolkit to manage a simple Todo application. The app demonstrates clean code practices, structured state management, and a focus on reusable components.
 
@@ -22,6 +22,7 @@ A React & TypeScript project built using Redux Toolkit to manage a simple Todo a
 ## Code Style
 
 The project adheres to modern coding standards, ensuring:
+
 - Clean and consistent code structure.
 - Reusable components with isolated logic.
 - Readable and maintainable architecture.
