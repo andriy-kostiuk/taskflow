@@ -1,5 +1,5 @@
 # TaskFlow
-[Todo App (Link)](https://andriy-kostiuk.github.io/taskflow/)
+[TaskFlow (Link)](https://andriy-kostiuk.github.io/task-flow/)
 
 A React & TypeScript project built using Redux Toolkit to manage a simple Todo application. The app demonstrates clean code practices, structured state management, and a focus on reusable components.
 
